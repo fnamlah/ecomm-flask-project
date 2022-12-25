@@ -1,0 +1,31 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer register</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Sign up with Bitcoder</h1>
+
+      <!-- This is where your WTForm will go -->
+        {{ wtf.quick_form(form) }}
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+</body>
+</html>
