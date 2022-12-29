@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Stores{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Stores</h1>
+
+	  <table class="table">
+	  {% for store in stores %}
+	  <tr>
+
+
+
+		  <td><a href="{{ url_for('list_of_products', store_targeted=store) }}">{{ store.store_name }}</a></td>
+
+
+	  </tr>
+	  {% endfor %}
+  	  </table>
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

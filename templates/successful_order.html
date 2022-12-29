@@ -1,0 +1,35 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Received</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Thank you, {{ user.username }} Your order has been successfully received</h1>
+        <h2>From {{ store.store_name }} store</h2>
+        <h3>Item {{ order.product_name }} store</h3>
+        <h4> Description: {{ order.product_description }} </h4>
+        <h4> Quantity: {{ order.quantity_bought }} </h4>
+
+        <button class="space-above"><a href="{{url_for('logout')}}">Logout</a></button>
+
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+</body>
+</html>

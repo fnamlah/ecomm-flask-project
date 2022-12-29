@@ -1,0 +1,32 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>owner register</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Welcome, {{ user }}</h1>
+        <h2>Current Store: {{ store }}</h2>
+
+<button class="space-above"><a href="{{url_for('add_product', current_store=store)}}">A products to your store</a></button>
+
+
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+</body>
+</html>

@@ -1,5 +1,6 @@
 {% extends 'bootstrap/base.html' %}
 {% import "bootstrap/wtf.html" as wtf %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,25 +9,73 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>owner register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 </head>
 <body>
-{% block content %}
+    {% block content %}
+
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-12 col-md-8">-->
+
+<!--      <h1>Register Your Stores</h1>-->
+
+<!--      &lt;!&ndash; This is where your WTForm will go &ndash;&gt;-->
+<!--        {{ wtf.quick_form(form) }}-->
+<!--        {{ form.store_name.label }}-->
+<!--        {{ form.store_name(class="form-control") }}-->
+<!--        {{ form.username.label }}-->
+<!--        {{ form.username(class="form-control") }}-->
+<!--        {{ form.email.label }}-->
+<!--        {{ form.email(class="form-control") }}-->
+<!--        {{ form.password.label }}-->
+<!--        {{ form.password(class="form-control") }}-->
+<!--        {{ form.submit(class="btn btn-primary") }}-->
+
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</div>-->
+
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-8">
+  <!-- Content here -->
 
-      <h1>Register Your Store</h1>
-
-      <!-- This is where your WTForm will go -->
-        {{ wtf.quick_form(form) }}
-
-
+    <div class="mb-3">
+      {{ form.store_name.label(class="form-label") }}
+        {{ form.store_name(class="form-control", id="formGroupExampleInput") }}
     </div>
-  </div>
+    <div class="mb-3">
+      {{ form.username.label(class="form-label") }}
+        {{ form.username(class="form-control") }}
+    </div>
+      <div class="mb-3">
+      {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+    </div>
+      <div class="mb-3">
+      {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">
+          Remember me
+        </label>
+      </div>
+    </div>
+    {{ form.submit(class="btn btn-primary") }}
 
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">New around here? Sign up</a>
+  <a class="dropdown-item" href="#">Forgot password?</a>
 </div>
 
-{% endblock %}
-<input type="hidden" id="role" name="role" value="owner">
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </html>
+{% endblock %}
+
